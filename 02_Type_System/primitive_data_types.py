@@ -17,3 +17,12 @@ print(my_string)
 print(my_int)
 print(my_float)
 print(my_bool)
+
+xyx = True
+xyx = False
+if xyx == True:
+    print(xyx)
+else:
+    print('abc ' + str(xyx))
+
+

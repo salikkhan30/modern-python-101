@@ -23,5 +23,21 @@ print(f"Louis is going to eat: {food}")
 food = "Eggs"
 print(f"Louis is going to eat: {food}")
 
-food = False  # Will execute but we can find bugs
+food = True  # Will execute but we can find bugs
 print(f"Louis is going to eat: {food}")
+
+food = str(food)
+print(food , type(food))
+
+#=============
+# COLLECTION
+#=============
+collection = ['apple', 'mango', 'banana']
+x, y , z = collection
+print(x , y , z )
+print(f'{x} , {y} , {z}')
+
+
+
+
+

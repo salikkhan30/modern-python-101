@@ -25,7 +25,7 @@ print("====================== Declare & Initialize To DataTypes Variables ======
 addresses : list = ['address 1' , 'address 2' , 'address 3']
 favoriteHobies : tuple = ('swiming', 'outing' , 'programming')
 myRange : range = range(3, 6)
-phoneList : dict ={'salik' : '0321465', 'Ahmed' : '4328u38'}
+phoneList : dict ={'Name' : 'SALIK KHAN', 'PhoneNumber' : '4328u38'}
 More : NoneType = None
 IsMale : bool = True
 anyOther : set = {'absd', 'werwer', 'gfhghfg'}
@@ -47,17 +47,84 @@ print('file2 : ' , file2, type(file2))
 print('file3 : ' , file3, type(file3))
 
 
+''' 
+=========================
+Manipulation with Bytes
+=========================
+'''
+# Manipulate bytes
+'''
+file1 = b"salik khan" # Assgin
+for x in file1:         # Loop to print individual byte in ASC 11
+    print(x)
+file1 = file1[6:10] # Slicing the bytes 
+print(file1)
+file1 = "New String"    
+print(file1)
+file1 = file1.encode("utf-8")   # Convert string into bytes
+print(file1)
+'''
 
-#Assigning To RANGE DataTypes Variables
+''' 
+=========================
+Create a phonebook dictionary that sames numbers (unique) with thier names
+=========================
+'''
+# Create Dictionary
+'''
+phoneList = {'number':'1111', 'name':'John'}
+print(phoneList)
+phoneList = dict(number='1111', name='Salik')
+print(phoneList)
+'''
+#Access dict
+'''
+print(phoneList['number'] , phoneList['name'])
+print(phoneList.get("name", 0))
+print(phoneList["Name"])    # Gives error if not exist
+print(phoneList.get("Name1", "customReturnError"))
+'''
+#Update and Adding new one
+'''
+phoneList['Name'] = 'John 1'
+phoneList['age'] = 32 # Add new column
+print(phoneList.get('Name', 'Name-N/A' + str(0)), phoneList.get('PnoneNumber', 'PH-N/A'), phoneList.get('age', 'Age-N/A'))
+'''
+# Delete Dictionary
+'''
+del phoneList['name']
+print(phoneList)
+del phoneList['name']   #gives error if not exist
+print(phoneList)
+
+phoneList.pop('name')
+print(phoneList)
+phoneList.pop('name2') # Gives error if not exist
+print(phoneList)
+phoneList.clear()
+print(phoneList, type(phoneList))
+'''
+
+''' 
+=========================
+Assigning To RANGE DataTypes Variables
+=========================
+'''
+#Assigning 
 '''
 myRange = range(1,10,2)
 print(myRange)
 print(myRange[0], myRange[2] , myRange[4])
 listing = list(myRange)
 print(listing)
-
 '''
-#Assigning To TUPPLE DataTypes Variables
+
+''' 
+=========================
+Assigning To TUPPLE DataTypes Variables
+=========================
+'''
+#Assigning
 '''
 favhoblist = list(favoriteHobies) # Tuple cannot be changed so convert into another datatype , modify & back to tuple
 favhoblist[1] = "changed Hobby"
@@ -70,7 +137,12 @@ print(favoriteHobies)
 
 '''
 
-#Assigning To LIST DataTypes Variables
+''' 
+=========================
+Assigning To LIST DataTypes Variables
+=========================
+'''
+#Manipulation
 '''
 print("====================== Assigning & Accessing To DataTypes Variables ========================")
 salary = 550000.34
@@ -90,4 +162,3 @@ addresses.pop(0)
 print('addresses : ' , addresses , type(addresses))
 print(addresses[:1] , addresses[2:])
 '''
-# favoriteHobies
